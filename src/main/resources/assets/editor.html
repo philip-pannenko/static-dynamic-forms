@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+<head>
+<title>Editor Page</title>
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="/css/jquery-ui-1.12.1.min.css">
+</head>
+<body>
+  <div id="menu">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link u-pull-left" href="/">Dynamic Menu</a></li>
+        <li class="navbar-item"><a class="navbar-link u-pull-right" style="margin-right: 0" href="/orders.html">Orders</a></li>
+        <li class="navbar-item"><a class="navbar-link u-pull-right" href="/menus.html">Menus</a></li>
+        <li class="navbar-item"><a class="navbar-link u-pull-right" href="/editor.html">Editor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="single-page" class="container">
+    <div class="row">
+      <div class="one-third column">
+        <div id="tabs" style="border: 1px solid #666; border-radius: 5px;">
+          <ul style="border-bottom: 1px solid #666;">
+            <li><a href="#tabs-1">Fields</a></li>
+            <li><a href="#tabs-2">Setting</a></li>
+          </ul>
+          <div id="tabs-1">
+            <ul style="list-style-type: none;">
+              <li><a id="add_text" style="cursor: pointer;">Text Field</a></li>
+              <li><a id="add_input" style="cursor: pointer;">Input Field</a></li>
+            </ul>
+          </div>
+          <div id="tabs-2">
+            <form>
+              <input id="field-id" type="hidden">
+              <label for="label-name">Label Name</label>
+              <input id="label-name" type="text">
+              <label for="data-model">Data Model</label>
+              <input id="data-model" type="text">
+              <button id="saveField" type="button">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="two-thirds column">
+        <button class="add">Add</button>
+        <form id="editor">
+          <div class="row">
+            <input type="hidden" name="id" value="-1">
+            <label for="name">Menu Name</label>
+            <input id="name" type="text" name="name">
+          </div>
+          <button id="add" type="button">Add</button>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/jquery-ui-1.12.1.min.js"></script>
+  <script src="/js/editor.js"></script>
+</body>
+</html>
